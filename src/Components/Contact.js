@@ -1,6 +1,6 @@
 import React from "react";
 import {MailIcon} from "@heroicons/react/solid";
-import {ContactForm} from "./ContactForm";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
     return (
