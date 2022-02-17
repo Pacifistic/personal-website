@@ -52,13 +52,14 @@ export default class ContactForm extends Component {
             subject: this.state.subject,
             message: this.state.message
         };
-        console.log(request);
         axios.post(endpoint, request)
             .then(res => {
-                console.log(res);
-                console.log(res.data)
+                this.setState({submitted: true});
+            })
+            .catch(err => {
+                console.log("unable to submit request");
+                this.setState({submitted: true});
             });
-        this.setState({submitted: true});
     }
 
     render() {
