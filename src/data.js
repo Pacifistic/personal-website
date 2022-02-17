@@ -11,3 +11,14 @@ export const skills = [
     "Unix",
     "Git"
 ];
+
+export const platforms = [
+    {
+        name: "Github",
+        link: "https://github.com/dsipelis"
+    },
+    {
+        name: "LinkedIn",
+        link: "https://www.linkedin.com/in/dominykas-sipelis/"
+    }
+]
