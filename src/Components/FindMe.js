@@ -13,7 +13,7 @@ export default function FindMe(){
                         Find Me on These Platforms
                     </h1>
                 </div>
-                <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 px-64">
+                <div className="flex flex-wrap lg:w-1/3 sm:mx-auto sm:mb-2 -mx-2">
                     {platforms.map((platform) => (
                         <div key={platform.name} className="p-2 sm:w-1/2 w-full">
                             <div className="bg-gray-800 rounded flex p-4 h-full items-center">
