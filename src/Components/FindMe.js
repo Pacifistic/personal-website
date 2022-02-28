@@ -17,9 +17,9 @@ export default function FindMe(){
                     {platforms.map((platform) => (
                         <div key={platform.name} className="p-2 sm:w-1/2 w-full">
                             <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                                <SocialIcon url={platform.link} bgColor="white" target="_blank"/>
+                                <SocialIcon url={platform.link} bgColor="white" target="_blank" rel="noreferrer"/>
                                 <span className="title-font font-medium text-white mx-2">
-                                    <a href={platform.link} target="_blank">
+                                    <a href={platform.link} target="_blank" rel="noreferrer">
                                         {platform.name}
                                     </a>
                                 </span>
