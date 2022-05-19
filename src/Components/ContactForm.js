@@ -20,7 +20,8 @@ export default class ContactForm extends Component {
             email: '',
             subject: '',
             message: '',
-            submitted: false
+            submitted: false,
+            error: false
         }
     }
 
@@ -58,7 +59,7 @@ export default class ContactForm extends Component {
             })
             .catch(err => {
                 console.log("unable to submit request");
-                this.setState({submitted: true});
+                this.setState({error: true});
             });
     }
 
@@ -67,12 +68,15 @@ export default class ContactForm extends Component {
         if(this.state.submitted)
             submit = <p className="text-center">Thank you, I will return back to you as soon as I can.</p>
         else
-            submit = <div className="flex justify-end py-4">
-                <button type="submit"
-                        className="bg-blue-700 text-white font-bold py-2 px-4 rounded focus:ring focus:ring-blue-300 hover:bg-blue-500">
-                    Submit
-                </button>
-            </div>
+            if(this.state.error)
+                submit = <p className="text-center">Sorry, something went wrong on our end, please try again later.</p>
+            else
+                submit = <div className="flex justify-end py-4">
+                    <button type="submit"
+                            className="bg-blue-700 text-white font-bold py-2 px-4 rounded focus:ring focus:ring-blue-300 hover:bg-blue-500">
+                        Submit
+                    </button>
+                </div>
 
         return(
         <div className="flex flex-col justify-center items-center">
