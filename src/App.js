@@ -3,6 +3,7 @@ import About from "./Components/About";
 import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
 import FindMe from "./Components/FindMe";
+import Certifications from "./Components/Certifications";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
           <About />
           <FindMe/>
           <Skills/>
+          <Certifications/>
           <Contact/>
       </main>
   );
